@@ -1,8 +1,11 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         task1();
         task2();
         task3();
+        task4();
 
     }
 
@@ -52,19 +55,42 @@ public class Main {
         int[] first = new int[]{3, 2, 1};
         first[2] = 1;
         for (int i = 0; i < 3; i++) {
+            if (i == first.length - 1) {
+                System.out.println(first[i]);
+                break;
+            }
             System.out.print(first[i] + ", ");
         }
-        System.out.println();
         double[] second = new double[]{9.986, 7.654, 1.57};
         second[0] = 9.986;
         for (int i = 0; i < second.length; i++) {
+            if (i == second.length - 1) {
+                System.out.println(second[i]);
+                break;
+            }
             System.out.print(second[i] + ", ");
         }
-        System.out.println();
-        int[] third = new int[5];
-        third[1] = 4;
-        for (int i = 0; i < third.length; i++) {
-            System.out.print(third[i]+ ", ");
+        {
+            int[] third = new int[5];
+            third[1] = 4;
+            for (int i = 0; i < third.length; i++) {
+                if (i == third.length - 1) {
+                    System.out.println(third[i]);
+                    break;
+                }
+                System.out.print(third[i] + ", ");
+            }
         }
+    }
+
+    public static void task4() {
+        System.out.println("Задача 4");
+        int[] first = new int[]{5, 2, 3};
+        for (int i = 0; i < first.length; i++){
+            if (first[i] % 2 != 0) {
+                first[i] += 1;
+            }
+        }
+        System.out.println(Arrays.toString(first));
     }
 }
